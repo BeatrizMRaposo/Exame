@@ -37,7 +37,7 @@ pipeline {
                 script {
                     // Executa o programa de testes .NET
                     // Certifique-se de substituir 'path/to/your/test/project' pelo caminho correto do seu projeto de teste
-                    bat 'dotnet run --project C:\Users\Beatriz Raposo\Desktop\Test Automation\PuppeteerTests' // Use 'bat' no Windows
+                    bat 'dotnet test --project PuppeteerTests//PuppeteerTests.csproj' // Use 'bat' no Windows
                     
                 }
             }
