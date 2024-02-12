@@ -37,7 +37,7 @@ pipeline {
                 script {
                     // Executa o programa de testes .NET
                     // Certifique-se de substituir 'path/to/your/test/project' pelo caminho correto do seu projeto de teste
-                    bat 'dotnet run --project CICD/Exame' // Use 'bat' no Windows
+                    bat 'dotnet run --project API/API.csproj' // Use 'bat' no Windows
                     // sh 'dotnet run --project path/to/your/test/project' // Use 'sh' em ambientes Unix
                 }
             }
