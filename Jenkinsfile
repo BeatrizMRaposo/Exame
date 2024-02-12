@@ -17,7 +17,7 @@ pipeline {
                 script {
                     // Restaura as dependências do projeto .NET
                     bat 'dotnet restore' // Use 'bat' no Windows
-                    
+                    // sh 'dotnet restore' // Use 'sh' em ambientes Unix
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
                 script {
                     // Compila o projeto .NET
                     bat 'dotnet build --no-restore' // Use 'bat' no Windows
-                    
+                    // sh 'dotnet build --no-restore' // Use 'sh' em ambientes Unix
                 }
             }
         }
@@ -37,8 +37,8 @@ pipeline {
                 script {
                     // Executa o programa de testes .NET
                     // Certifique-se de substituir 'path/to/your/test/project' pelo caminho correto do seu projeto de teste
-                    bat 'dotnet test --project bat 'C:\\Users\\Beatriz Raposo\\Desktop\\Exame\\Exame\\PuppeteerTests'' // Use 'bat' no Windows
-                    
+                    bat 'dotnet run --project CICD/Exame' // Use 'bat' no Windows
+                    // sh 'dotnet run --project path/to/your/test/project' // Use 'sh' em ambientes Unix
                 }
             }
         }
